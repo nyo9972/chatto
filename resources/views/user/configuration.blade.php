@@ -45,38 +45,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="input-group form-group col-md-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-music"></i></span>
-                                </div>
-                                <input id="favourite_bands" type="text" class="form-control" name="favourite_bands" value="{{ $user->favourite_bands }}" placeholder="Diz aí, quais suas bandas favoritas?" required autocomplete="favourite_bands">
-                            </div>
-
-                            <div class="input-group form-group col-md-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-film"></i></span>
-                                </div>
-                                <input id="favourite_movies" type="text" class="form-control" name="favourite_movies" value="{{ $user->favourite_movies }}" placeholder="Agora me diz, quais seus filmes preferidos?" required autocomplete="favourite_movies">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-group form-group col-md-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-trophy"></i></span>
-                                </div>
-                                <input id="hobbies" type="text" class="form-control" name="hobbies" value="{{ $user->hobbies }}" placeholder="Quais são seus hobbies?" autocomplete="hobbies">
-                            </div>
-
-                            <div class="input-group form-group col-md-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
-                                </div>
-                                <input id="profession" type="text" class="form-control" name="profession" value="{{ $user->profession }}" placeholder="Qual sua profissão?" autocomplete="profession">
-                            </div>
-                        </div>
                         <br>
                         <div class="row">
                             <div class="col-md-6">
@@ -87,10 +55,6 @@
                                     <input id="birthday" type="date" class="form-control" name="birthday" value="{{ $user->birthday }}" placeholder="Agora me diz, quais seus filmes preferidos?" required autocomplete="birthday">
                                 </div>
                             </div>
-
-                            <div class="input-group form-group col-md-6">
-                                <textarea id="description"  class="form-control" name="description" placeholder="Use esse espaço para falar um pouco sobre você!" autocomplete="description">{{ $user->description }}</textarea>
-                            </div>
                         </div>
 
                         <div class="row">
@@ -99,14 +63,6 @@
                                 <label for="avatar"><span class="btn btn-primary">Escolha uma foto de perfil</span></label>
                                 <div class="row">
                                     <img  id="output" src="{{asset('/storage/users-avatar/'.Auth::user()->avatar)}}" alt="imagem"  class="ml-4 avatar-md rounded-circle" style="width: 110px; height: 90px" alt="Avatar" />
-                                </div>
-                            </div>
-
-                            <div class="input-group form-group col-md-6">
-                                <input class="form-control" id="background" onchange="loadFileBackground(event)" style="max-width: 140px; border-radius: 40px; display: none" type="file" name="background">
-                                <label for="background"><span class="btn btn-primary">Escolha uma foto de capa</span></label>
-                                <div class="row">
-                                    <img  id="outputbg" src="{{asset('/storage/background/'.Auth::user()->background)}}" alt="imagem"  class="ml-4 avatar-md rounded-circle" style="width: 110px; height: 90px" alt="background" />
                                 </div>
                             </div>
                         </div>

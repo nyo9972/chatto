@@ -19,8 +19,8 @@
             <div class="messenger-listView-tabs">
                 <a href="#" @if($type == 'user') class="active-tab" @endif data-view="users">
                     <span class="far fa-user"></span> Pessoas</a>
-                <a href="#" @if($type == 'group') class="active-tab" @endif data-view="groups">
-                    <span class="fas fa-users"></span> Todas as pessoas</a>
+{{--                <a href="#" @if($type == 'group') class="active-tab" @endif data-view="groups">--}}
+{{--                    <span class="fas fa-users"></span> Todas as pessoas</a>--}}
             </div>
         </div>
         {{-- tabs and lists --}}
@@ -118,6 +118,7 @@
         {!! view('Chatify::layouts.info')->render() !!}
     </div>
 </div>
+
 
 @include('Chatify::layouts.modals')
 @include('Chatify::layouts.footerLinks')

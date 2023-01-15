@@ -20,12 +20,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('avatar')->default(config('chatify.user_avatar.default'));
-            $table->string('background')->default('bg.png');
-            $table->string('description')->nullable();
-            $table->string('favourite_bands')->nullable();
-            $table->string('favourite_movies')->nullable();
-            $table->string('hobbies')->nullable();
-            $table->string('profession')->nullable();
             $table->decimal('height')->nullable();
             $table->date('birthday')->nullable();
             $table->boolean('active_status')->default(0);
