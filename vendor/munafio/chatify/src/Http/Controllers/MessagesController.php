@@ -58,16 +58,13 @@ class MessagesController extends Controller
             ? $routeName
             : 'user';
 
-        if(!Auth::user()->birthday){
-            return redirect(Route('configuration'));
-        }else{
             return view('Chatify::pages.app', [
                 'id' => $id ?? 0,
                 'type' => $type ?? 'user',
                 'messengerColor' => Auth::user()->messenger_color ?? $this->messengerFallbackColor,
                 'dark_mode' => Auth::user()->dark_mode < 1 ? 'light' : 'dark',
             ]);
-        }
+        
     }
 
 
